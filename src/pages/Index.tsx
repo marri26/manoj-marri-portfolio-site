@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react';
+import Navigation from '@/components/Navigation';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -36,6 +37,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       <DarkModeToggle />
       <HeroSection />
       <AboutSection />
