@@ -23,7 +23,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="group hover:scale-105 transition-all duration-200 shadow-lg"
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1SqKNXM-kTNNRwJuCFsG2VoTsbkBXn76k/view?usp=sharing', '_blank')}
             >
               <Download className="w-4 h-4 mr-2 group-hover:animate-pulse" />
               Download Resume
@@ -53,7 +53,7 @@ const HeroSection = () => {
           <div className="relative group">
             <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl">
               <img
-                src="/lovable-uploads/aecd4b99-6aea-44bb-b0b1-8875ed7406cc.png"
+                src="/lovable-uploads/0f3351d2-0157-4f73-b274-d1ac0b94abf2.png"
                 alt="Manoj Kumar Marri"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
