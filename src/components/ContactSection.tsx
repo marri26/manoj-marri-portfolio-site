@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
-import { Linkedin, Github, Instagram, Facebook } from "lucide-react";
+import { Linkedin, Github, Facebook, Phone, Mail, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -128,30 +128,64 @@ const ContactSection = () => {
                 variant="outline"
                 size="lg"
                 className="w-full justify-start hover:scale-105 transition-all duration-200"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open('https://github.com/marri26', '_blank')}
               >
                 <Github className="w-4 h-4 mr-3" />
                 GitHub Profile
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full justify-start hover:scale-105 transition-all duration-200"
+                onClick={() => window.open('mailto:manojkumar.marri26@gmail.com', '_blank')}
+              >
+                <Mail className="w-4 h-4 mr-3" />
+                Email Me
               </Button>
               
               <div className="grid grid-cols-2 gap-4">
                 <Button
                   variant="outline"
                   className="justify-start hover:scale-105 transition-all duration-200"
-                  onClick={() => window.open('#', '_blank')}
+                  onClick={() => window.open('https://wa.me/919494911311', '_blank')}
                 >
-                  <Instagram className="w-4 h-4 mr-2" />
-                  Instagram
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp
                 </Button>
                 
                 <Button
                   variant="outline"
                   className="justify-start hover:scale-105 transition-all duration-200"
-                  onClick={() => window.open('#', '_blank')}
+                  onClick={() => window.open('https://www.facebook.com/marri26', '_blank')}
                 >
                   <Facebook className="w-4 h-4 mr-2" />
                   Facebook
                 </Button>
+              </div>
+              
+              <div className="space-y-2 pt-4">
+                <p className="text-sm text-muted-foreground">Call me directly:</p>
+                <div className="flex flex-col gap-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="justify-start"
+                    onClick={() => window.open('tel:+919494911311', '_blank')}
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    (+91) 9494911311
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="justify-start"
+                    onClick={() => window.open('tel:+918247343726', '_blank')}
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    (+91) 8247343726
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

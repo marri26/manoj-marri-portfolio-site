@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Download, Linkedin } from "lucide-react";
+import { Download, Linkedin, Github } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -36,6 +37,15 @@ const HeroSection = () => {
               <Linkedin className="w-4 h-4 mr-2 group-hover:text-blue-600" />
               Connect on LinkedIn
             </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="group hover:scale-105 transition-all duration-200"
+              onClick={() => window.open('https://github.com/marri26', '_blank')}
+            >
+              <Github className="w-4 h-4 mr-2 group-hover:text-gray-800" />
+              GitHub Profile
+            </Button>
           </div>
         </div>
         
@@ -43,7 +53,7 @@ const HeroSection = () => {
           <div className="relative group">
             <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl">
               <img
-                src="/placeholder.svg"
+                src="/lovable-uploads/aecd4b99-6aea-44bb-b0b1-8875ed7406cc.png"
                 alt="Manoj Kumar Marri"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
