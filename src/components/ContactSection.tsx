@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Github, Instagram, Facebook } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -45,9 +45,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 px-6" id="contact">
+    <section className="py-16 px-6" id="contact">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-light text-center mb-12 animate-on-scroll">Get In Touch</h2>
+        <h2 className="text-3xl font-light text-center mb-10 animate-on-scroll">Get In Touch</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="animate-on-scroll">
@@ -123,6 +123,36 @@ const ContactSection = () => {
                 <Linkedin className="w-4 h-4 mr-3" />
                 LinkedIn Profile
               </Button>
+              
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full justify-start hover:scale-105 transition-all duration-200"
+                onClick={() => window.open('#', '_blank')}
+              >
+                <Github className="w-4 h-4 mr-3" />
+                GitHub Profile
+              </Button>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <Button
+                  variant="outline"
+                  className="justify-start hover:scale-105 transition-all duration-200"
+                  onClick={() => window.open('#', '_blank')}
+                >
+                  <Instagram className="w-4 h-4 mr-2" />
+                  Instagram
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  className="justify-start hover:scale-105 transition-all duration-200"
+                  onClick={() => window.open('#', '_blank')}
+                >
+                  <Facebook className="w-4 h-4 mr-2" />
+                  Facebook
+                </Button>
+              </div>
             </div>
           </div>
         </div>

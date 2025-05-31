@@ -8,7 +8,8 @@ const DarkModeToggle = () => {
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');
-    const isDarkMode = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    // Default to light mode unless explicitly set to dark
+    const isDarkMode = saved === 'dark';
     setIsDark(isDarkMode);
     document.documentElement.classList.toggle('dark', isDarkMode);
   }, []);
