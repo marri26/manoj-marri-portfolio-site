@@ -54,32 +54,35 @@ const ExperienceSection = () => {
     <section className="min-h-screen flex items-center py-20 px-6" id="experience">
       <div className="max-w-4xl mx-auto w-full">
         <h2 className="text-4xl font-light text-center mb-16 animate-on-scroll">Experience Timeline</h2>
-        <div className="space-y-8">
+        <div className="space-y-8 relative">
+          {/* Timeline line */}
+          <div className="absolute left-8 top-0 w-0.5 h-full bg-gradient-to-b from-primary via-purple-500 to-primary opacity-30"></div>
+          
           {experiences.map((exp, index) => (
-            <div key={index} className="relative animate-on-scroll">
-              <div className="bg-card rounded-xl p-6 lg:p-8 shadow-sm border">
+            <div key={index} className="relative animate-on-scroll hover:scale-105 transition-transform duration-300">
+              {/* Timeline dot */}
+              <div className="absolute left-6 top-8 w-4 h-4 bg-gradient-to-r from-primary to-purple-500 rounded-full shadow-lg pulse-glow"></div>
+              
+              <div className="ml-16 bg-card rounded-xl p-6 lg:p-8 shadow-sm border hover:shadow-xl transition-all duration-300 hover:border-primary/30 ripple">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-medium">{exp.title}</h3>
-                    <p className="text-primary font-medium">{exp.company}</p>
+                    <h3 className="text-xl font-medium hover:text-primary transition-colors duration-300">{exp.title}</h3>
+                    <p className="text-primary font-medium gradient-text">{exp.company}</p>
                   </div>
                   <div className="text-muted-foreground mt-2 lg:mt-0 lg:text-right">
-                    <p>{exp.period}</p>
+                    <p className="hover:text-primary transition-colors duration-300">{exp.period}</p>
                     <p>{exp.location}</p>
                   </div>
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-muted-foreground flex items-start">
-                      <span className="text-primary mr-3 mt-[2px] text-lg leading-none">•</span>
+                    <li key={achIndex} className="text-muted-foreground flex items-start hover:text-foreground transition-colors duration-300 group">
+                      <span className="text-primary mr-4 mt-[2px] text-lg leading-none group-hover:scale-125 transition-transform duration-300">•</span>
                       <span className="flex-1">{achievement}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              {index < experiences.length - 1 && (
-                <div className="absolute left-4 top-full w-0.5 h-8 bg-border"></div>
-              )}
             </div>
           ))}
         </div>
