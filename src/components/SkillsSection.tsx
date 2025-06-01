@@ -3,26 +3,38 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Languages & Tools",
-      skills: ["Python", "SQL (BigQuery, DBT)", "Git", "Google Data Studio", "Looker Studio"]
+      skills: ["SQL (BigQuery, DBT)", "Python", "Git", "GSheets", "Excel"]
     },
     {
-      title: "Analytics & Data",
-      skills: ["EDA", "Machine Learning", "Dashboards", "KPIs", "ETL", "Reporting"]
+      title: "Dashboards & BI",
+      skills: ["Looker Studio", "Power BI", "Metabase"]
+    },
+    {
+      title: "Python Packages",
+      skills: ["Numpy", "Pandas", "Matplotlib", "Streamlit"]
+    },
+    {
+      title: "Analytics & Automation",
+      skills: ["ETL", "KPI Reporting", "Retention Analysis", "GA4", "Mixpanel"]
+    },
+    {
+      title: "Generative AI",
+      skills: ["OpenAI (Assistants API, Whisper)", "Gemini"]
     },
     {
       title: "Collaboration",
-      skills: ["Stakeholder Communication", "Strategic Thinking", "Team Leadership"]
+      skills: ["Stakeholder Communication", "Cross-functional Coordination", "Mentoring"]
     }
   ];
 
   return (
-    <section className="py-20 px-6" id="skills">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-light text-center mb-12 animate-on-scroll text-white">Skills Snapshot</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="min-h-screen flex items-center py-20 px-6" id="skills">
+      <div className="max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl font-light text-center mb-16 animate-on-scroll text-white">Skills Snapshot</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="animate-on-scroll">
-              <h3 className="text-xl font-medium mb-4 text-center text-white">{category.title}</h3>
+              <h3 className="text-xl font-medium mb-6 text-center text-white">{category.title}</h3>
               <div className="flex flex-wrap gap-3 justify-center">
                 {category.skills.map((skill, skillIndex) => (
                   <span

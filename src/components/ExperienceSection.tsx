@@ -3,32 +3,57 @@ const ExperienceSection = () => {
   const experiences = [
     {
       title: "Senior Data Analyst",
-      company: "NxtWave",
+      company: "NxtWave Disruptive Technologies Ltd.",
       period: "Oct 2023 – Present",
       location: "Hyderabad",
       achievements: [
-        "Led analytics for sales KPIs, improving conversion & cost metrics",
-        "Managed BigQuery data pipelines and ETL from CRM systems",
-        "Mentored and directed team of analysts"
+        "Partnered with sales leaders to define KPIs and improve conversions through analytics",
+        "Developed dashboards and reports for tracking key performance metrics",
+        "Created lead prioritization logic, improving targeting across segments",
+        "Managed CRM data pipelines and ETL workflows into BigQuery",
+        "Designed DBT data models to enhance accessibility and cost-efficiency",
+        "Mentored a team of data analysts and led adoption of automation tools",
+        "Streamlined CRM workflows, improving data reliability and business efficiency"
       ]
     },
     {
       title: "Data Analyst",
-      company: "NxtWave",
-      period: "Apr 2022 – Sep 2023",
+      company: "NxtWave Disruptive Technologies Ltd.",
+      period: "Apr 2022 – Oct 2023",
       location: "Hyderabad",
       achievements: [
-        "Owned Retention/Engagement pod, improved daily user activity by 20%",
-        "Delivered founder-level reports: MoM retention, NPS, usage insights",
-        "Built dynamic cohort dashboards with Looker Studio"
+        "Built dashboards for daily user engagement and retention tracking",
+        "Developed retention buckets that boosted DAU by 20%",
+        "Liaised with the founder's office for data needs around investor updates",
+        "Delivered key metrics: MoM retention, NPS, time spent, feedback loops",
+        "Conducted data literacy workshops to enable self-serve analytics"
+      ]
+    },
+    {
+      title: "Business Development Associate",
+      company: "NxtWave Disruptive Technologies Ltd.",
+      period: "Jun 2021 – Apr 2022",
+      location: "Hyderabad",
+      achievements: [
+        "Handled customer interactions and business development activities",
+        "Analyzed customer data to improve conversion strategies"
+      ]
+    },
+    {
+      title: "Architectural Intern",
+      company: "Various Projects",
+      period: "2017",
+      location: "Hyderabad",
+      achievements: [
+        "Handled basic design tasks, concept visualization, and project documentation"
       ]
     }
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/30" id="experience">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-light text-center mb-12 animate-on-scroll">Experience Timeline</h2>
+    <section className="min-h-screen flex items-center py-20 px-6 bg-muted/30" id="experience">
+      <div className="max-w-4xl mx-auto w-full">
+        <h2 className="text-4xl font-light text-center mb-16 animate-on-scroll">Experience Timeline</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div key={index} className="relative animate-on-scroll">

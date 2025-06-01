@@ -45,11 +45,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-16 px-6" id="contact">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-light text-center mb-10 animate-on-scroll">Get In Touch</h2>
+    <section className="min-h-screen flex items-center py-20 px-6" id="contact">
+      <div className="max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl font-light text-center mb-16 animate-on-scroll text-white">Get In Touch</h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="animate-on-scroll">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -57,7 +57,7 @@ const ContactSection = () => {
                   placeholder="Full Name *"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="h-12"
+                  className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/60"
                 />
               </div>
               
@@ -67,7 +67,7 @@ const ContactSection = () => {
                   placeholder="Email *"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="h-12"
+                  className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/60"
                 />
               </div>
               
@@ -76,9 +76,9 @@ const ContactSection = () => {
                   placeholder="Message (optional, max 500 characters)"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value.slice(0, 500) })}
-                  className="min-h-[120px] resize-none"
+                  className="min-h-[120px] resize-none bg-white/10 border-white/20 text-white placeholder:text-white/60"
                 />
-                <p className="text-xs text-muted-foreground mt-1">
+                <p className="text-xs text-white/60 mt-1">
                   {formData.message.length}/500 characters
                 </p>
               </div>
@@ -88,8 +88,9 @@ const ContactSection = () => {
                   id="consent"
                   checked={formData.consent}
                   onCheckedChange={(checked) => setFormData({ ...formData, consent: checked as boolean })}
+                  className="border-white/20 data-[state=checked]:bg-white data-[state=checked]:text-blue-600"
                 />
-                <label htmlFor="consent" className="text-sm text-muted-foreground">
+                <label htmlFor="consent" className="text-sm text-white/80">
                   I agree to be contacted via email. *
                 </label>
               </div>
@@ -98,7 +99,7 @@ const ContactSection = () => {
                 type="submit" 
                 size="lg" 
                 disabled={isSubmitting}
-                className="w-full hover:scale-105 transition-all duration-200"
+                className="w-full hover:scale-105 transition-all duration-200 bg-white text-blue-600 hover:bg-white/90"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
@@ -107,8 +108,8 @@ const ContactSection = () => {
           
           <div className="animate-on-scroll space-y-8">
             <div>
-              <h3 className="text-xl font-medium mb-4">Let's Connect</h3>
-              <p className="text-muted-foreground mb-6">
+              <h3 className="text-2xl font-medium mb-4 text-white">Let's Connect</h3>
+              <p className="text-white/80 mb-8 text-lg leading-relaxed">
                 I'm always open to discussing new opportunities, collaborations, or just having a chat about data and analytics.
               </p>
             </div>
@@ -117,7 +118,7 @@ const ContactSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full justify-start hover:scale-105 transition-all duration-200"
+                className="w-full justify-start hover:scale-105 transition-all duration-200 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white"
                 onClick={() => window.open('https://www.linkedin.com/in/manoj-kumar-marri-798385168/', '_blank')}
               >
                 <Linkedin className="w-4 h-4 mr-3" />
@@ -127,7 +128,7 @@ const ContactSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full justify-start hover:scale-105 transition-all duration-200"
+                className="w-full justify-start hover:scale-105 transition-all duration-200 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white"
                 onClick={() => window.open('https://github.com/marri26', '_blank')}
               >
                 <Github className="w-4 h-4 mr-3" />
@@ -137,7 +138,7 @@ const ContactSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full justify-start hover:scale-105 transition-all duration-200"
+                className="w-full justify-start hover:scale-105 transition-all duration-200 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white"
                 onClick={() => window.open('mailto:manojkumar.marri26@gmail.com', '_blank')}
               >
                 <Mail className="w-4 h-4 mr-3" />
@@ -147,7 +148,7 @@ const ContactSection = () => {
               <div className="grid grid-cols-2 gap-4">
                 <Button
                   variant="outline"
-                  className="justify-start hover:scale-105 transition-all duration-200"
+                  className="justify-start hover:scale-105 transition-all duration-200 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white"
                   onClick={() => window.open('https://wa.me/919494911311', '_blank')}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
@@ -156,7 +157,7 @@ const ContactSection = () => {
                 
                 <Button
                   variant="outline"
-                  className="justify-start hover:scale-105 transition-all duration-200"
+                  className="justify-start hover:scale-105 transition-all duration-200 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white"
                   onClick={() => window.open('https://www.facebook.com/marri26', '_blank')}
                 >
                   <Facebook className="w-4 h-4 mr-2" />
@@ -164,13 +165,13 @@ const ContactSection = () => {
                 </Button>
               </div>
               
-              <div className="space-y-2 pt-4">
-                <p className="text-sm text-muted-foreground">Call me directly:</p>
+              <div className="space-y-3 pt-6">
+                <p className="text-sm text-white/70">Call me directly:</p>
                 <div className="flex flex-col gap-2">
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="justify-start"
+                    className="justify-start text-white hover:bg-white/10 hover:text-white"
                     onClick={() => window.open('tel:+919494911311', '_blank')}
                   >
                     <Phone className="w-4 h-4 mr-2" />
@@ -179,7 +180,7 @@ const ContactSection = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="justify-start"
+                    className="justify-start text-white hover:bg-white/10 hover:text-white"
                     onClick={() => window.open('tel:+918247343726', '_blank')}
                   >
                     <Phone className="w-4 h-4 mr-2" />

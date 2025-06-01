@@ -49,12 +49,16 @@ const Navigation = () => {
     <nav className="fixed top-4 left-4 right-4 z-50 bg-blue-500/20 backdrop-blur-md border border-blue-200/30 rounded-2xl shadow-lg">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-14">
-          {/* Logo with Initials */}
+          {/* Logo with Profile Image */}
           <div 
-            className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white font-bold text-sm rounded-full cursor-pointer hover:bg-blue-700 transition-colors duration-300 shadow-lg"
+            className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full cursor-pointer hover:bg-blue-700 transition-all duration-300 shadow-lg overflow-hidden"
             onClick={() => scrollToSection('hero')}
           >
-            MKM
+            <img
+              src="/lovable-uploads/aecd4b99-6aea-44bb-b0b1-8875ed7406cc.png"
+              alt="Manoj Kumar Marri"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Desktop Navigation - Responsive grid */}
