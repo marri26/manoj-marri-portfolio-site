@@ -19,17 +19,17 @@ const AchievementsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/30" id="achievements">
+    <section className="py-16 px-6" id="achievements">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-light text-center mb-12 animate-on-scroll">Achievements & Highlights</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
             <div 
               key={index}
-              className="bg-card rounded-xl p-6 text-center shadow-sm border hover:scale-105 transition-all duration-300 animate-on-scroll"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-card rounded-xl p-6 text-center shadow-sm border card-hover animate-on-scroll"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="text-4xl mb-4">{achievement.icon}</div>
+              <div className="text-4xl mb-4 transform hover:scale-110 transition-transform duration-300">{achievement.icon}</div>
               <h3 className="text-xl font-medium mb-3">{achievement.title}</h3>
               <p className="text-muted-foreground">{achievement.description}</p>
             </div>

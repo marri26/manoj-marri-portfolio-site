@@ -46,27 +46,27 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-4 left-4 right-4 z-50 bg-blue-500/20 backdrop-blur-md border border-blue-200/30 rounded-2xl shadow-lg">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <div 
-            className="font-semibold text-lg cursor-pointer hover:text-primary transition-colors"
+            className="font-semibold text-lg cursor-pointer hover:text-blue-600 transition-colors"
             onClick={() => scrollToSection('hero')}
           >
             Manoj Kumar Marri
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Responsive grid */}
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-all duration-300 px-3 py-2 rounded-lg hover:bg-blue-500/20 ${
                   activeSection === item.id 
-                    ? 'text-primary' 
-                    : 'text-muted-foreground'
+                    ? 'text-blue-600 bg-blue-500/20 font-semibold' 
+                    : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 {item.label}
@@ -74,9 +74,32 @@ const Navigation = () => {
             ))}
           </div>
 
+          {/* Tablet Navigation - Compact */}
+          <div className="hidden md:flex lg:hidden items-center space-x-3">
+            {navItems.slice(0, 6).map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`text-xs font-medium transition-all duration-300 px-2 py-1 rounded-lg hover:bg-blue-500/20 ${
+                  activeSection === item.id 
+                    ? 'text-blue-600 bg-blue-500/20 font-semibold' 
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+            <button
+              className="text-xs font-medium text-gray-700 hover:text-blue-600 px-2 py-1"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              More
+            </button>
+          </div>
+
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 hover:bg-blue-500/20 rounded-lg transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -84,18 +107,18 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile/Tablet Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden lg:hidden py-4 border-t border-blue-200/30 animate-fade-in">
+            <div className="grid grid-cols-2 gap-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-2 py-1 text-sm font-medium transition-colors hover:text-primary ${
+                  className={`text-left px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-blue-500/20 ${
                     activeSection === item.id 
-                      ? 'text-primary' 
-                      : 'text-muted-foreground'
+                      ? 'text-blue-600 bg-blue-500/20 font-semibold' 
+                      : 'text-gray-700 hover:text-blue-600'
                   }`}
                 >
                   {item.label}

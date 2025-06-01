@@ -7,7 +7,7 @@ const ResumeSection = () => {
   const embedUrl = "https://drive.google.com/file/d/1SqKNXM-kTNNRwJuCFsG2VoTsbkBXn76k/preview";
 
   return (
-    <section className="py-16 px-6 bg-muted/30" id="resume">
+    <section className="py-16 px-6" id="resume">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 animate-on-scroll">
           <h2 className="text-3xl font-light mb-4">Resume</h2>
@@ -20,24 +20,24 @@ const ResumeSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="group hover:scale-105 transition-all duration-200 shadow-lg"
+              className="group btn-hover hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               onClick={() => window.open(resumeUrl, '_blank')}
             >
-              <Download className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+              <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
               Download Resume
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              className="group hover:scale-105 transition-all duration-200"
+              className="group btn-hover hover:scale-105 transition-all duration-300 hover:bg-blue-50 hover:border-blue-300"
               onClick={() => window.open(resumeUrl, '_blank')}
             >
-              <ExternalLink className="w-4 h-4 mr-2" />
+              <ExternalLink className="w-4 h-4 mr-2 group-hover:rotate-45 transition-transform" />
               View in Google Drive
             </Button>
           </div>
 
-          <div className="bg-background rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-background rounded-lg shadow-lg overflow-hidden card-hover">
             <div className="aspect-[3/4] w-full">
               <iframe
                 src={embedUrl}

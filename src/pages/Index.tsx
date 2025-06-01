@@ -41,16 +41,57 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <DarkModeToggle />
-      <HeroSection />
-      <AboutSection />
-      <AchievementsSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <BlogsSection />
-      <TestimonialsSection />
-      <ResumeSection />
-      <ContactSection />
+      
+      {/* Blue gradient background for hero */}
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+        <HeroSection />
+      </div>
+      
+      {/* White background */}
+      <div className="bg-white">
+        <AboutSection />
+      </div>
+      
+      {/* Blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+        <AchievementsSection />
+      </div>
+      
+      {/* White background */}
+      <div className="bg-white">
+        <SkillsSection />
+      </div>
+      
+      {/* Blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+        <ExperienceSection />
+      </div>
+      
+      {/* White background */}
+      <div className="bg-white">
+        <ProjectsSection />
+      </div>
+      
+      {/* Blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+        <BlogsSection />
+      </div>
+      
+      {/* White background */}
+      <div className="bg-white">
+        <TestimonialsSection />
+      </div>
+      
+      {/* Blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+        <ResumeSection />
+      </div>
+      
+      {/* White background */}
+      <div className="bg-white">
+        <ContactSection />
+      </div>
+      
       <Footer />
     </div>
   );
