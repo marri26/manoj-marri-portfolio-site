@@ -1,7 +1,6 @@
 
 import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
-import DarkModeToggle from '@/components/DarkModeToggle';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import AchievementsSection from '@/components/AchievementsSection';
@@ -40,55 +39,54 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <DarkModeToggle />
       
-      {/* Blue gradient background for hero */}
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+      {/* White background for hero */}
+      <div className="bg-white">
         <HeroSection />
       </div>
       
-      {/* White background */}
-      <div className="bg-white">
+      {/* Vibrant blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-500 to-blue-600">
         <AboutSection />
       </div>
       
-      {/* Blue gradient background */}
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+      {/* White background */}
+      <div className="bg-white">
         <AchievementsSection />
       </div>
       
-      {/* White background */}
-      <div className="bg-white">
+      {/* Vibrant blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-600 to-blue-700">
         <SkillsSection />
       </div>
       
-      {/* Blue gradient background */}
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+      {/* White background */}
+      <div className="bg-white">
         <ExperienceSection />
       </div>
       
-      {/* White background */}
-      <div className="bg-white">
+      {/* Vibrant blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-500 to-blue-600">
         <ProjectsSection />
       </div>
       
-      {/* Blue gradient background */}
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+      {/* White background */}
+      <div className="bg-white">
         <BlogsSection />
       </div>
       
-      {/* White background */}
-      <div className="bg-white">
+      {/* Vibrant blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-600 to-blue-700">
         <TestimonialsSection />
       </div>
       
-      {/* Blue gradient background */}
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+      {/* White background */}
+      <div className="bg-white">
         <ResumeSection />
       </div>
       
-      {/* White background */}
-      <div className="bg-white">
+      {/* Vibrant blue gradient background */}
+      <div className="bg-gradient-to-br from-blue-500 to-blue-600">
         <ContactSection />
       </div>
       
