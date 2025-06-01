@@ -55,36 +55,26 @@ const ResumeSection = () => {
               <h3 className="text-xl font-medium mb-4">Resume Highlights</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  3+ years of data analytics experience
+                  <span className="text-primary mr-3 mt-[2px] text-lg leading-none">•</span>
+                  <span className="flex-1">3+ years of data analytics experience</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Expertise in SQL, Python, and BI tools
+                  <span className="text-primary mr-3 mt-[2px] text-lg leading-none">•</span>
+                  <span className="flex-1">Expertise in SQL, Python, and BI tools</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Proven track record in team leadership
+                  <span className="text-primary mr-3 mt-[2px] text-lg leading-none">•</span>
+                  <span className="flex-1">Proven track record in team leadership</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Experience with ML and automation
+                  <span className="text-primary mr-3 mt-[2px] text-lg leading-none">•</span>
+                  <span className="flex-1">Experience with ML and automation</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Strong business impact achievements
+                  <span className="text-primary mr-3 mt-[2px] text-lg leading-none">•</span>
+                  <span className="flex-1">Strong business impact achievements</span>
                 </li>
               </ul>
-            </div>
-            
-            <div className="bg-card rounded-xl p-8 shadow-sm border">
-              <h3 className="text-xl font-medium mb-4">Contact Info</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p>📧 manojkumar.marri26@gmail.com</p>
-                <p>📱 (+91) 9494911311</p>
-                <p>📍 Hyderabad, India</p>
-                <p>🔗 LinkedIn: manoj-kumar-marri</p>
-              </div>
             </div>
           </div>
         </div>

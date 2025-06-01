@@ -51,7 +51,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center py-20 px-6 bg-muted/30" id="experience">
+    <section className="min-h-screen flex items-center py-20 px-6" id="experience">
       <div className="max-w-4xl mx-auto w-full">
         <h2 className="text-4xl font-light text-center mb-16 animate-on-scroll">Experience Timeline</h2>
         <div className="space-y-8">
@@ -71,8 +71,8 @@ const ExperienceSection = () => {
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, achIndex) => (
                     <li key={achIndex} className="text-muted-foreground flex items-start">
-                      <span className="text-primary mr-2 mt-1">•</span>
-                      {achievement}
+                      <span className="text-primary mr-3 mt-[2px] text-lg leading-none">•</span>
+                      <span className="flex-1">{achievement}</span>
                     </li>
                   ))}
                 </ul>

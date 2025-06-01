@@ -19,6 +19,10 @@ const Navigation = () => {
     { id: 'contact', label: 'Contact' }
   ];
 
+  // Sections with blue backgrounds
+  const blueSections = ['about', 'skills', 'projects', 'testimonials', 'contact'];
+  const isCurrentSectionBlue = blueSections.includes(activeSection);
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => document.getElementById(item.id));
@@ -45,17 +49,21 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
+  const textColorClass = isCurrentSectionBlue ? 'text-white' : 'text-gray-700';
+  const hoverColorClass = isCurrentSectionBlue ? 'hover:text-blue-200' : 'hover:text-blue-600';
+  const activeColorClass = isCurrentSectionBlue ? 'text-blue-200 bg-white/20' : 'text-blue-600 bg-blue-500/20';
+
   return (
-    <nav className="fixed top-4 left-4 right-4 z-50 bg-blue-500/20 backdrop-blur-md border border-blue-200/30 rounded-2xl shadow-lg">
+    <nav className="fixed top-4 left-4 right-4 z-50 bg-blue-500/20 backdrop-blur-md border border-blue-200/30 rounded-2xl shadow-lg transition-all duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-14">
           {/* Logo with Profile Image */}
           <div 
-            className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full cursor-pointer hover:bg-blue-700 transition-all duration-300 shadow-lg overflow-hidden"
+            className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full cursor-pointer hover:bg-blue-700 transition-all duration-300 shadow-lg overflow-hidden hover:scale-105"
             onClick={() => scrollToSection('hero')}
           >
             <img
-              src="/lovable-uploads/aecd4b99-6aea-44bb-b0b1-8875ed7406cc.png"
+              src="/lovable-uploads/9b4a4d91-e0b7-4c54-84d5-460cfe64d009.png"
               alt="Manoj Kumar Marri"
               className="w-full h-full object-cover"
             />
@@ -67,10 +75,10 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-all duration-300 px-3 py-2 rounded-lg hover:bg-blue-500/20 ${
+                className={`text-sm font-medium transition-all duration-300 px-3 py-2 rounded-lg ${hoverColorClass} ${
                   activeSection === item.id 
-                    ? 'text-blue-600 bg-blue-500/20 font-semibold' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? `${activeColorClass} font-semibold` 
+                    : `${textColorClass} hover:bg-blue-500/10`
                 }`}
               >
                 {item.label}
@@ -84,17 +92,17 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-xs font-medium transition-all duration-300 px-2 py-1 rounded-lg hover:bg-blue-500/20 ${
+                className={`text-xs font-medium transition-all duration-300 px-2 py-1 rounded-lg ${hoverColorClass} ${
                   activeSection === item.id 
-                    ? 'text-blue-600 bg-blue-500/20 font-semibold' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? `${activeColorClass} font-semibold` 
+                    : `${textColorClass} hover:bg-blue-500/10`
                 }`}
               >
                 {item.label}
               </button>
             ))}
             <button
-              className="text-xs font-medium text-gray-700 hover:text-blue-600 px-2 py-1"
+              className={`text-xs font-medium px-2 py-1 transition-all duration-300 ${textColorClass} ${hoverColorClass}`}
               onClick={() => setIsOpen(!isOpen)}
             >
               More
@@ -103,7 +111,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover:bg-blue-500/20 rounded-lg transition-colors"
+            className={`md:hidden p-2 hover:bg-blue-500/20 rounded-lg transition-colors ${textColorClass}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -119,10 +127,10 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-blue-500/20 ${
+                  className={`text-left px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${hoverColorClass} ${
                     activeSection === item.id 
-                      ? 'text-blue-600 bg-blue-500/20 font-semibold' 
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? `${activeColorClass} font-semibold` 
+                      : `${textColorClass} hover:bg-blue-500/10`
                   }`}
                 >
                   {item.label}
