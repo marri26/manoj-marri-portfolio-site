@@ -29,7 +29,7 @@ const AboutSection = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/20 hover:bg-white/15 transition-all duration-500">
               <div className="space-y-6 text-white/90 leading-relaxed">
                 <p className="text-lg hover:text-white transition-colors duration-300">
-                  I'm Manoj Kumar Marri, a Senior Data Analyst with nearly 3 years of experience driving decisions through data.
+                  I'm Manoj Kumar Marri, a Data Lead-II with above 3 years of experience driving decisions through data.
                 </p>
                 <p className="text-lg hover:text-white transition-colors duration-300">
                   Currently at NxtWave, I lead sales analytics initiatives — from KPI definition to data architecture and reporting — while mentoring a team of analysts.
