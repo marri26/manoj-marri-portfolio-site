@@ -12,7 +12,7 @@ const HeroSection = () => {
               Manoj Kumar Marri
             </h1>
             <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-muted-foreground animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Senior Data Analyst @ NxtWave
+              Data Lead-II @ NxtWave
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-lg animate-fade-in" style={{ animationDelay: '0.4s' }}>
               Gen AI · ML · Python · SQL (BigQuery, DBT) · Looker Studio
