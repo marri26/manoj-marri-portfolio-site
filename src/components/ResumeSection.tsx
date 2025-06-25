@@ -20,6 +20,11 @@ const ResumeSection = () => {
                 className="w-full h-[600px] lg:h-[700px]"
                 title="Resume PDF"
                 frameBorder="0"
+                allow="autoplay"
+                onError={(e) => {
+                  console.log('Resume iframe failed to load:', e);
+                  // Fallback: show a message or alternative view
+                }}
               />
             </div>
           </div>

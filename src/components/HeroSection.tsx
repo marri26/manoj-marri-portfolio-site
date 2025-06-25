@@ -53,7 +53,7 @@ const HeroSection = () => {
           <div className="relative group hover-lift">
             <div className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
               <img
-                src="/lovable-uploads/0f3351d2-0157-4f73-b274-d1ac0b94abf2.png"
+                src="/lovable-uploads/fc16c2da-cca4-4812-934f-acae35a542b2.png"
                 alt="Manoj Kumar Marri"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-110"
               />
