@@ -4,8 +4,20 @@ import { Download, Linkedin, Github } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center px-6 pt-24 pb-12" id="hero">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen flex items-center px-6 pt-24 pb-12 relative overflow-hidden" id="hero">
+      {/* Subtle Background Animation */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-32 right-1/4 w-4 h-4 bg-blue-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-1/3 left-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-50" style={{ animationDelay: '3s' }}></div>
+      <div className="absolute top-1/2 right-1/6 w-2 h-2 bg-pink-400 rounded-full animate-bounce opacity-40" style={{ animationDelay: '5s' }}></div>
+      
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-8 animate-on-scroll">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground animate-fade-in">
@@ -51,14 +63,21 @@ const HeroSection = () => {
         
         <div className="flex justify-center lg:justify-end animate-scale-in">
           <div className="relative group hover-lift">
-            <div className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
+            {/* Increased size by 20% */}
+            <div className="w-80 h-80 md:w-[22rem] md:h-[22rem] lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 relative">
               <img
-                src="/lovable-uploads/fc16c2da-cca4-4812-934f-acae35a542b2.png"
+                src="/lovable-uploads/9b4a4d91-e0b7-4c54-84d5-460cfe64d009.png"
                 alt="Manoj Kumar Marri"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-110"
               />
+              {/* Glowing ring effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 via-transparent to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
             </div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            {/* Decorative elements around the image */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60 animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full opacity-50 animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-1/2 -left-6 w-4 h-4 bg-pink-500 rounded-full opacity-40 animate-pulse" style={{ animationDelay: '4s' }}></div>
           </div>
         </div>
       </div>
