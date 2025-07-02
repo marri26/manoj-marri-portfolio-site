@@ -68,7 +68,7 @@ const HeroSection = () => {
               <img
                 src="/lovable-uploads/9b4a4d91-e0b7-4c54-84d5-460cfe64d009.png"
                 alt="Manoj Kumar Marri"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-110"
               />
               {/* Glowing ring effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 via-transparent to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>

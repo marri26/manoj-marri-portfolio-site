@@ -18,9 +18,9 @@ const AboutSection = () => {
               <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-500 hover:shadow-2xl">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500">
                   <img
-                    src="/public/lovable-uploads/fc16c2da-cca4-4812-934f-acae35a542b2.png"
+                    src="/lovable-uploads/fc16c2da-cca4-4812-934f-acae35a542b2.png"
                     alt="Manoj Kumar Marri"
-                    className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                    className="w-full h-auto object-cover transition-all duration-700 hover:scale-105"
                   />
                   
                   {/* Overlay on hover */}
