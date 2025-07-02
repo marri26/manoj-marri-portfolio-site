@@ -1,35 +1,36 @@
 
 const AboutSection = () => {
   return (
-    <section className="min-h-screen flex items-center px-6 py-20" id="about">
-      <div className="max-w-6xl mx-auto w-full">
+    <section className="min-h-screen flex items-center px-6 py-20 relative overflow-hidden" id="about">
+      {/* Subtle Background Animation */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-32 right-1/4 w-3 h-3 bg-blue-400 rounded-full animate-bounce opacity-40" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-30" style={{ animationDelay: '3s' }}></div>
+      <div className="absolute top-1/2 right-1/6 w-4 h-4 bg-pink-400 rounded-full animate-bounce opacity-35" style={{ animationDelay: '5s' }}></div>
+      
+      <div className="max-w-6xl mx-auto w-full relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-light text-white animate-on-scroll">About</h2>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Photo Container */}
-          <div className="animate-on-scroll">
+          <div className="animate-on-scroll flex justify-center">
             <div className="relative group">
-              {/* Subtle glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-600/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-700"></div>
+              <img
+                src="/lovable-uploads/fc16c2da-cca4-4812-934f-acae35a542b2.png"
+                alt="Manoj Kumar Marri"
+                className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-105"
+              />
               
-              {/* Main photo container */}
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-500 hover:shadow-2xl">
-                <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500">
-                  <img
-                    src="/lovable-uploads/fc16c2da-cca4-4812-934f-acae35a542b2.png"
-                    alt="Manoj Kumar Marri"
-                    className="w-full h-auto object-cover transition-all duration-700 hover:scale-105"
-                  />
-                  
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Subtle border enhancement */}
-                  <div className="absolute inset-0 border-2 border-white/10 rounded-2xl group-hover:border-white/30 transition-colors duration-500"></div>
-                </div>
-              </div>
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-600/10 rounded-3xl blur-xl opacity-50 group-hover:opacity-80 transition-opacity duration-700"></div>
               
               {/* Corner accent elements */}
               <div className="absolute -top-2 -right-2 w-3 h-3 bg-blue-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
