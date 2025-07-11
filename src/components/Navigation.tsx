@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -14,13 +13,12 @@ const Navigation = () => {
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'blogs', label: 'Blogs' },
-    { id: 'testimonials', label: 'Testimonials' },
     { id: 'resume', label: 'Resume' },
     { id: 'contact', label: 'Contact' }
   ];
 
   // Sections with blue backgrounds
-  const blueSections = ['about', 'skills', 'projects', 'testimonials', 'contact'];
+  const blueSections = ['about', 'skills', 'projects', 'contact'];
   const isCurrentSectionBlue = blueSections.includes(activeSection);
 
   useEffect(() => {

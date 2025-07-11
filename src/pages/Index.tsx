@@ -8,7 +8,6 @@ import SkillsSection from '@/components/SkillsSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import BlogsSection from '@/components/BlogsSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
 import ResumeSection from '@/components/ResumeSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -73,11 +72,6 @@ const Index = () => {
       {/* White background */}
       <div className="bg-white">
         <BlogsSection />
-      </div>
-      
-      {/* Vibrant blue gradient background */}
-      <div className="bg-gradient-to-br from-blue-600 to-blue-700">
-        <TestimonialsSection />
       </div>
       
       {/* White background */}
