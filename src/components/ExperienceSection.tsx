@@ -2,7 +2,7 @@
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Senior Data Analyst",
+      title: "Senior Data Analyst (Data Lead-II)",
       company: "NxtWave Disruptive Technologies Ltd.",
       period: "Oct 2023 – Present",
       location: "Hyderabad",

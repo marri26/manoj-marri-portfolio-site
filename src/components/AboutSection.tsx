@@ -49,7 +49,7 @@ const AboutSection = () => {
                   <div className="relative">
                     <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-400 to-purple-600 rounded-full opacity-60"></div>
                     <p className="text-lg hover:text-white transition-colors duration-300 pl-4">
-                      I'm Manoj Kumar Marri, a Data Lead-II with above 3 years of experience driving decisions through data.
+                      I'm Manoj Kumar Marri, a Senior Data Analyst (Data Lead-II) with above 3 years of experience driving decisions through data.
                     </p>
                   </div>
                   
