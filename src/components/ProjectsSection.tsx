@@ -16,22 +16,6 @@ const ProjectsSection = () => {
       icon: "📞",
       date: "Jun 2024 – Present",
       link: "#"
-    },
-    {
-      title: "User Engagement Dashboard",
-      description: "A comprehensive Looker Studio dashboard visualizing daily user segments and retention metrics",
-      tech: "BigQuery, Looker Studio, DBT",
-      icon: "📈",
-      date: "2023",
-      link: "#"
-    },
-    {
-      title: "NPS Prediction Model",
-      description: "ML model to identify churn-risk users based on platform activity and engagement patterns",
-      tech: "Python, Scikit-learn, BigQuery",
-      icon: "🤖",
-      date: "2023",
-      link: "#"
     }
   ];
 
